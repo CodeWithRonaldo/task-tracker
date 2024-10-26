@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="container">
+        <div class="header">
+            <h1>Task Tracker <img src="./assets/task.png" alt="task-icon"></h1>
+            <form  class="row">
+                <input type="text" class="input-task" name="task" placeholder="Enter task">
+                <button class="add-btn">Add</button>
+            </form>
+            <div class="select-group">
+                <select class="category">
+                    <option value="">Select Category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Home">Home</option>
+                    <option value="Work">Work</option>
+                </select>
+                <select class="task-priority">
+                    <option value="">Select Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+               <input type="date" class="task-due-date"> 
+            </div>
+            <div>
+                <h3>Sorting and Filtering</h3>
+            <select class="sort-tasks">
+                <option value="">Sort by...</option>
+                <option value="priority">Priority</option>
+                <option value="dueDate">Due Date</option>
+            </select>
+            <select class="filter-tasks">
+                <option value="">Filter by Category</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="home">Home</option>
+            </select>
+            </div>
+            
+            <div>
+                <ul  class="task-list">
+
+                </ul>
+            
+            </div>
+            
+        </div>
+        <div>
+            
+        </div>
+        
+
+    </section>
+    <script src="script.js" ></script>
+</body>
+</html>
