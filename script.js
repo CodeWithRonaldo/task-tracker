@@ -69,3 +69,16 @@ filterTasks.addEventListener("change", () => {
 
   console.log(filteredTask);
 });
+const priorityLevel = { High: 1, Medium: 2, Low: 3 };
+sortTasks.addEventListener("change", () => {
+  const sortedTask = listedTasks.sort((a, b) => {
+    if (sortTasks.value === "dueDate") {
+      return new Date(a.dueDate) - new Date(b.dueDate);
+    } else if (sortTasks.value === "priority") {
+      return priorityLevel[a.priority] - priorityLevel[b.priority];
+    } else {
+    }
+  });
+  AddTaskToList(sortedTask);
+  
+});
