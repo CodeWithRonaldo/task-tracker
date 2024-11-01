@@ -41,34 +41,40 @@ body {
 
 .row{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding-left: 50px; */
-    background-color: rgb(227, 223, 223);
+    flex-direction: column;
+    
+    
     border-radius: 30px;
 
-}
 
-input{
-    /* width:85%; */
-    flex: 1;
+}
+.input-add{
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+
+}
+.input-task{
+    width:70%;
     outline: none;
     border: none;
-    background: transparent;
+    background:aliceblue;
     padding: 10px;
+    overflow: hidden;
+    ;
 }
 
 button{
     width: 15%;
     background-color: #ff5945;
     border: none;
-    border-radius: 40px;
+    border-radius: 5px;
     outline: none;
-    padding: 15px 50px;
     cursor: pointer;
     font-size: 16px;
     color: white;
-    padding: 12px;
+    padding: 7px;
+    margin-right: 30px;
 }
 
 button:hover{
@@ -91,4 +97,48 @@ select{
 }
 .task-due-date{
     max-width: 30%;
+    border: thin solid #ff5945;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+table{
+   
+    box-shadow: 0px 0px 2px black;
+    text-align: left;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+
+
+   
+
+}
+
+thead {
+   
+    background-color: aliceblue;
+    text-transform: uppercase;
+}
+
+td{
+    padding: 10px;
+    
+    
+}
+tr:nth-child(even){
+    background-color: aliceblue;
+}
+
+th{
+    padding: 10px;
+}
+tr:last-child{
+    border-bottom: none;
+}
+
+tbody tr{
+    border-bottom: 1px solid black;
 }
