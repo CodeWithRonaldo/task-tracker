@@ -34,6 +34,7 @@ addTaskButton.addEventListener("click", (e) => {
 });
 
 function AddTaskToList(taskArray) {
+  taskTable.innerHTML = "";
   taskArray.forEach((task) => {
     const tableRow = document.createElement("tr");
 
