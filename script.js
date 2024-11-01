@@ -56,3 +56,16 @@ function AddTaskToList(taskArray) {
     taskTable.appendChild(tableRow);
   });
 }
+
+filterTasks.addEventListener("change", () => {
+  const filteredTask = listedTasks.filter((task) => {
+    return task.category.toLowerCase() === filterTasks.value.toLowerCase();
+  });
+  if (filteredTask.length > 0) {
+    AddTaskToList(filteredTask);
+  } else {
+    AddTaskToList(listedTasks);
+  }
+
+  console.log(filteredTask);
+});
