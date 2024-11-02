@@ -33,7 +33,7 @@ addTaskButton.addEventListener("click", (e) => {
   }
 });
 
-function AddTaskToList(taskArray) {
+const AddTaskToList = (taskArray) => {
   taskTable.innerHTML = "";
   taskArray.forEach((task) => {
     const tableRow = document.createElement("tr");
@@ -55,7 +55,7 @@ function AddTaskToList(taskArray) {
 
     taskTable.appendChild(tableRow);
   });
-}
+};
 
 filterTasks.addEventListener("change", () => {
   const filteredTask = listedTasks.filter((task) => {
@@ -66,8 +66,6 @@ filterTasks.addEventListener("change", () => {
   } else {
     AddTaskToList(listedTasks);
   }
-
-  console.log(filteredTask);
 });
 const priorityLevel = { High: 1, Medium: 2, Low: 3 };
 sortTasks.addEventListener("change", () => {
@@ -80,5 +78,4 @@ sortTasks.addEventListener("change", () => {
     }
   });
   AddTaskToList(sortedTask);
-  
 });
